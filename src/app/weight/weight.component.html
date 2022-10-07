@@ -1,43 +1,44 @@
 <section class="weight">
+    <form [formGroup]="formgroup">
     <mat-dialog-content>
         <button mat-raised-button color="warn" class="close" mat-dialog-close>close</button>
-        <h1 mat-dialog-title>Volume Converter</h1>
+        <h1 mat-dialog-title>Weight Converter</h1>
         <mat-form-field class="example-full-width" appearance="fill">
-            <mat-label>Meter Cube : </mat-label>
-            <input matInput value="0" type="number" id="kiloTometer">
+            <mat-label>Kilogramme : </mat-label>
+            <input matInput [value]="ktogramme" type="number" formControlName="kiloTogramme">
         </mat-form-field>
         <mat-form-field class="example-full-width" appearance="fill">
-            <mat-label>Liter : </mat-label>
-            <input matInput value="0" type="number" id="meterTokilo">
+            <mat-label>Gramme : </mat-label>
+            <input matInput [value]="grammetok" type="number" formControlName="grammeTokilo">
         </mat-form-field>
         <mat-form-field class="example-full-width" appearance="fill">
-            <mat-label>Millilter : </mat-label>
-            <input matInput value="0" type="number" id="kiloTomile" >
+            <mat-label>Kilogramme : </mat-label>
+            <input matInput [value]="ktotone" type="number" formControlName="kiloTotone" >
         </mat-form-field>
         <mat-form-field class="example-full-width" appearance="fill">
-            <mat-label>Centimeter Cube : </mat-label>
-            <input matInput value="0" type="number" id="mileTokilo" >
+            <mat-label>Tone : </mat-label>
+            <input matInput [value]="tonetok" type="number" formControlName="toneTokilo" >
         </mat-form-field>
         <mat-form-field class="example-full-width" appearance="fill">
-            <mat-label>Meter Cube : </mat-label>
-            <input matInput value="0" type="number" id="meterToinch" >
+            <mat-label>Kilogramme : </mat-label>
+            <input matInput [value]="ktoquintal" type="number" formControlName="kiloToquital" >
         </mat-form-field>
         <mat-form-field class="example-full-width" appearance="fill">
-            <mat-label>Decimeter Cube : </mat-label>
-            <input matInput value="0" type="number" id="inchTometer" >
+            <mat-label>Quintal : </mat-label>
+            <input matInput [value]="quintaltok" type="number" formControlName="quintalTokilo" >
         </mat-form-field>
         <mat-form-field class="example-full-width" appearance="fill">
-            <mat-label>Meter Cube : </mat-label>
-            <input matInput value="0" type="number" id="meterTofeet" >
+            <mat-label>Kilogramme : </mat-label>
+            <input matInput [value]="ktopound" type="number" formControlName="kiloTopound" >
         </mat-form-field>
         <mat-form-field class="example-full-width" appearance="fill">
-            <mat-label>Centimeter Cube : </mat-label>
-            <input matInput value="0" type="number" id="feetTometer">
-        </mat-form-field>
-        
+            <mat-label>Pound : </mat-label>
+            <input matInput [value]="poundtok" type="number" formControlName="poundTokilo">
+        </mat-form-field>        
     </mat-dialog-content>
     <mat-dialog-actions>
-        <button mat-raised-button color="primary" class="convert">Convert</button>
-        <button mat-raised-button color="primary" class="reset">Reset</button>
+        <button mat-raised-button color="primary" class="convert" (click)="convert()">Convert</button>
+        <button mat-raised-button color="primary" class="reset" (click)="reset()">Reset</button>
     </mat-dialog-actions>
+</form>
 </section>

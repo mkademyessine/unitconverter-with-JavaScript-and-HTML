@@ -1,43 +1,45 @@
 <section class="speed">
+    <form [formGroup]="formgroup">
     <mat-dialog-content>
         <button mat-raised-button color="warn" class="close" mat-dialog-close>close</button>
         <h1 mat-dialog-title>Speed Converter</h1>
         <mat-form-field class="example-full-width" appearance="fill">
             <mat-label>Kilometer/Hour : </mat-label>
-            <input matInput value="0" type="number" id="kiloTohour">
+            <input matInput [value]="kmtoh" type="number" formControlName="kiloTohour">
         </mat-form-field>
         <mat-form-field class="example-full-width" appearance="fill">
             <mat-label>Meter/Second : </mat-label>
-            <input matInput value="0" type="number" id="hourTokilo">
+            <input matInput [value]="mtosec" type="number" formControlName="meterTosecond">
         </mat-form-field>
         <mat-form-field class="example-full-width" appearance="fill">
             <mat-label>Kilometer/Hour : </mat-label>
-            <input matInput value="0" type="number" id="kiloTomile" >
+            <input matInput [value]="kmtomile" type="number" formControlName="kiloTomile" >
         </mat-form-field>
         <mat-form-field class="example-full-width" appearance="fill">
             <mat-label>Mile/Hour : </mat-label>
-            <input matInput value="0" type="number" id="mileTohour" >
+            <input matInput [value]="miletokm" type="number" formControlName="mileTokilo" >
         </mat-form-field>
         <mat-form-field class="example-full-width" appearance="fill">
             <mat-label>Mile/Hour : </mat-label>
-            <input matInput value="0" type="number" id="hourTomile" >
+            <input matInput [value]="miletom" type="number" formControlName="mileTosecond" >
         </mat-form-field>
         <mat-form-field class="example-full-width" appearance="fill">
             <mat-label>Meter/Second : </mat-label>
-            <input matInput value="0" type="number" id="mileTosecond" >
+            <input matInput [value]="mtomile" type="number" formControlName="secondTomile" >
         </mat-form-field>
         <mat-form-field class="example-full-width" appearance="fill">
             <mat-label>Kilometer/Hour : </mat-label>
-            <input matInput value="0" type="number" id="kiloTofeet" >
+            <input matInput [value]="kmtofeet" type="number" formControlName="kiloTofeet" >
         </mat-form-field>
         <mat-form-field class="example-full-width" appearance="fill">
             <mat-label>Feet/Second : </mat-label>
-            <input matInput value="0" type="number" id="feetTosecond">
+            <input matInput [value]="feettokm" type="number" formControlName="feetTosecond">
         </mat-form-field>
         
     </mat-dialog-content>
     <mat-dialog-actions>
-        <button mat-raised-button color="primary" class="convert">Convert</button>
-        <button mat-raised-button color="primary" class="reset">Reset</button>
+        <button mat-raised-button color="primary" class="convert" (click)="convert()">Convert</button>
+        <button mat-raised-button color="primary" class="reset" (click)="reset()">Reset</button>
     </mat-dialog-actions>
+</form>
 </section>

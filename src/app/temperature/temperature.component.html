@@ -1,43 +1,36 @@
 <section class="temperature">
+    <form [formGroup]="formgroup">
     <mat-dialog-content>
         <button mat-raised-button color="warn" class="close" mat-dialog-close>close</button>
-        <h1 mat-dialog-title>Volume Converter</h1>
+        <h1 mat-dialog-title>Temperature Converter</h1>
         <mat-form-field class="example-full-width" appearance="fill">
-            <mat-label>Meter Cube : </mat-label>
-            <input matInput value="0" type="number" id="kiloTometer">
+            <mat-label>Celsius : </mat-label>
+            <input matInput [value]="celtokel" type="number" formControlName="celTokelvin">
         </mat-form-field>
         <mat-form-field class="example-full-width" appearance="fill">
-            <mat-label>Liter : </mat-label>
-            <input matInput value="0" type="number" id="meterTokilo">
+            <mat-label>Kelvin : </mat-label>
+            <input matInput [value]="keltocel" type="number" formControlName="kelvinTocel">
         </mat-form-field>
         <mat-form-field class="example-full-width" appearance="fill">
-            <mat-label>Millilter : </mat-label>
-            <input matInput value="0" type="number" id="kiloTomile" >
+            <mat-label>Celsius : </mat-label>
+            <input matInput [value]="celtofah" type="number" formControlName="celTofahren" >
         </mat-form-field>
         <mat-form-field class="example-full-width" appearance="fill">
-            <mat-label>Centimeter Cube : </mat-label>
-            <input matInput value="0" type="number" id="mileTokilo" >
+            <mat-label>Fahrenheit : </mat-label>
+            <input matInput [value]="fahtocel" type="number" formControlName="fahrenTocel" >
         </mat-form-field>
         <mat-form-field class="example-full-width" appearance="fill">
-            <mat-label>Meter Cube : </mat-label>
-            <input matInput value="0" type="number" id="meterToinch" >
+            <mat-label>Kelvin : </mat-label>
+            <input matInput [value]="keltofah" type="number" formControlName="kelvinTofahren" >
         </mat-form-field>
         <mat-form-field class="example-full-width" appearance="fill">
-            <mat-label>Decimeter Cube : </mat-label>
-            <input matInput value="0" type="number" id="inchTometer" >
+            <mat-label>Fahrenheit : </mat-label>
+            <input matInput [value]="fahtokel" type="number" formControlName="fahrenTokelvin" >
         </mat-form-field>
-        <mat-form-field class="example-full-width" appearance="fill">
-            <mat-label>Meter Cube : </mat-label>
-            <input matInput value="0" type="number" id="meterTofeet" >
-        </mat-form-field>
-        <mat-form-field class="example-full-width" appearance="fill">
-            <mat-label>Centimeter Cube : </mat-label>
-            <input matInput value="0" type="number" id="feetTometer">
-        </mat-form-field>
-        
     </mat-dialog-content>
     <mat-dialog-actions>
-        <button mat-raised-button color="primary" class="convert">Convert</button>
-        <button mat-raised-button color="primary" class="reset">Reset</button>
-    </mat-dialog-actions>    
+        <button mat-raised-button color="primary" class="convert" (click)="convert()">Convert</button>
+        <button mat-raised-button color="primary" class="reset" (click)="reset()">Reset</button>
+    </mat-dialog-actions>  
+</form>  
 </section>
