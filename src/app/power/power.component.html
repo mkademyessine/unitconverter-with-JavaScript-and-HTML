@@ -1,34 +1,36 @@
 <section class="power">
+    <form [formGroup]="formgroup">
     <mat-dialog-content>
         <button mat-raised-button color="warn" class="close" mat-dialog-close>close</button>
         <h1 mat-dialog-title>Power Converter</h1>
         <mat-form-field class="example-full-width" appearance="fill">
             <mat-label>Watt : </mat-label>
-            <input matInput value="0" type="number" id="wattTojoulesecond">
+            <input matInput [value]="wtojoule" type="number" formControlName="wattTojoulesecond">
         </mat-form-field>
         <mat-form-field class="example-full-width" appearance="fill">
             <mat-label>Joules/second : </mat-label>
-            <input matInput value="0" type="number" id="joulesecondTowatt">
+            <input matInput [value]="jouletow" type="number" formControlName="joulesecondTowatt">
         </mat-form-field>
         <mat-form-field class="example-full-width" appearance="fill">
             <mat-label>Watt : </mat-label>
-            <input matInput value="0" type="number" id="wattTojouleminute" >
+            <input matInput [value]="wtojoulemin" type="number" formControlName="wattTojouleminute" >
         </mat-form-field>
         <mat-form-field class="example-full-width" appearance="fill">
             <mat-label>Joules/minute : </mat-label>
-            <input matInput value="0" type="number" id="jouleminuteTowatt" >
+            <input matInput [value]="joulemintow" type="number" formControlName="jouleminuteTowatt" >
         </mat-form-field>
         <mat-form-field class="example-full-width" appearance="fill">
             <mat-label>Watt : </mat-label>
-            <input matInput value="0" type="number" id="wattTojoulehour" >
+            <input matInput [value]="wtojouleh" type="number" formControlName="wattTojoulehour" >
         </mat-form-field>
         <mat-form-field class="example-full-width" appearance="fill">
             <mat-label>Joules/hour : </mat-label>
-            <input matInput value="0" type="number" id="joulehourTowatt" >
+            <input matInput [value]="joulehtow" type="number" formControlName="joulehourTowatt" >
         </mat-form-field>
     </mat-dialog-content>
     <mat-dialog-actions>
-        <button mat-raised-button color="primary" class="convert">Convert</button>
-        <button mat-raised-button color="primary" class="reset">Reset</button>
+        <button mat-raised-button color="primary" class="convert" (click)="convert()">Convert</button>
+        <button mat-raised-button color="primary" class="reset" (click)="reset()">Reset</button>
     </mat-dialog-actions>
+</form>
 </section>
