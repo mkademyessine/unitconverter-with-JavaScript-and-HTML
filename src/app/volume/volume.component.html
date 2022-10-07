@@ -1,0 +1,45 @@
+<section class="volume">
+    <form [formGroup]="formgroup">
+    <mat-dialog-content>
+        <button mat-raised-button color="warn" class="close" mat-dialog-close>close</button>
+        <h1 mat-dialog-title>Volume Converter</h1>
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Meter Cube : </mat-label>
+            <input matInput [value]="mtoliter" type="number" formControlName="meterToliter">
+        </mat-form-field>
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Liter : </mat-label>
+            <input matInput [value]="litertom" type="number" formControlName="literTometer">
+        </mat-form-field>
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Millilter : </mat-label>
+            <input matInput [value]="millitocent" type="number" formControlName="milliTocent" >
+        </mat-form-field>
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Centimeter Cube : </mat-label>
+            <input matInput [value]="centtomilli" type="number" formControlName="cenTomilli" >
+        </mat-form-field>
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Meter Cube : </mat-label>
+            <input matInput [value]="mtodec" type="number" formControlName="meterTodecimeter" >
+        </mat-form-field>
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Decimeter Cube : </mat-label>
+            <input matInput [value]="dectom" type="number" formControlName="decimeterTometer" >
+        </mat-form-field>
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Meter Cube : </mat-label>
+            <input matInput [value]="mtocent" type="number" formControlName="meterTcent" >
+        </mat-form-field>
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Centimeter Cube : </mat-label>
+            <input matInput [value]="centtom" type="number" formControlName="centTometer">
+        </mat-form-field>
+        
+    </mat-dialog-content>
+    <mat-dialog-actions>
+        <button mat-raised-button color="primary" class="convert" (click)="convert()">Convert</button>
+        <button mat-raised-button color="primary" class="reset" (click)="reset()">Reset</button>
+    </mat-dialog-actions>
+</form>
+</section>

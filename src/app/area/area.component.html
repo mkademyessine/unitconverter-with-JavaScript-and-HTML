@@ -1,0 +1,45 @@
+
+<section class="area">
+    <form [formGroup]="formgroup">
+    <mat-dialog-content>
+        <button mat-raised-button color="warn" class="close" mat-dialog-close>close</button>
+        <h1 mat-dialog-title>Area Converter</h1>
+        <mat-form-field class="example-full-width" appearance="fill" >
+            <mat-label>Meter Square : </mat-label>
+            <input matInput [value]="mtocent" type="number" formControlName="meterTocent" >
+        </mat-form-field>
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Centimeter Square : </mat-label>
+            <input matInput [value]="centtom" type="number" formControlName="centTometer" >
+        </mat-form-field>
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Meter Square : </mat-label>
+            <input matInput [value]="mtohectare" type="number" formControlName="meterTohectare" >
+        </mat-form-field>
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Hectare : </mat-label>
+            <input matInput [value]="hectaretom" type="number" formControlName="hectareTometer" >
+        </mat-form-field>
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Kilometer Square : </mat-label>
+            <input matInput [value]="kmtom"  type="number" formControlName="kilometerTometer" >
+        </mat-form-field>
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Meter Square : </mat-label>
+            <input matInput [value]="mtokm" type="number" formControlName="meterTokilometer">
+        </mat-form-field>
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Kilometer Square : </mat-label>
+            <input matInput [value]="kmtohectare" type="number" formControlName="kilometerTohectare">
+        </mat-form-field>
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Hectare : </mat-label>
+            <input matInput [value]="hectaretokm" type="number" formControlName="hectareTokilometer">
+        </mat-form-field>        
+    </mat-dialog-content>
+    <mat-dialog-actions>
+            <button mat-raised-button color="primary" class="convert" (click)="convert()" >Convert</button>
+            <button mat-raised-button color="primary" class="reset" (click)="reset()" >Reset</button>
+    </mat-dialog-actions>
+</form>
+</section>

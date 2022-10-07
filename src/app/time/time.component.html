@@ -1,0 +1,45 @@
+<section class="time">
+    <form [formGroup]="formgroup">
+    <mat-dialog-content>
+        <button mat-raised-button color="warn" class="close" mat-dialog-close>close</button>
+        <h1 mat-dialog-title>Time Converter</h1>
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Hour : </mat-label>
+            <input matInput [value]="htomin" type="number" formControlName="hourTominute">
+        </mat-form-field>
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Minute : </mat-label>
+            <input matInput [value]="mintoh" type="number" formControlName="minuteTohour">
+        </mat-form-field>
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Hour : </mat-label>
+            <input matInput [value]="htosec" type="number" formControlName="hourTosecond" >
+        </mat-form-field>
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Second : </mat-label>
+            <input matInput [value]="sectoh" type="number" formControlName="secondTohour" >
+        </mat-form-field>
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Minute : </mat-label>
+            <input matInput [value]="" type="number" formControlName="minuteTosecond" >
+        </mat-form-field>
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Second : </mat-label>
+            <input matInput [value]="sectomin" type="number" formControlName="secondTominute" >
+        </mat-form-field>
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Second : </mat-label>
+            <input matInput [value]="sectomili" type="number" formControlName="secondTomili" >
+        </mat-form-field>
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Milisecond : </mat-label>
+            <input matInput [value]="militosec" type="number" formControlName="miliTosecond">
+        </mat-form-field>
+        
+    </mat-dialog-content>
+    <mat-dialog-actions>
+        <button mat-raised-button color="primary" class="convert">Convert</button>
+        <button mat-raised-button color="primary" class="reset">Reset</button>
+    </mat-dialog-actions>
+</form>
+</section>

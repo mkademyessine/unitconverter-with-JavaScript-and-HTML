@@ -1,0 +1,45 @@
+<section class="distance">
+    <form [formGroup]="formgroup">
+    <mat-dialog-content>
+        <button mat-raised-button color="warn" class="close" mat-dialog-close>close</button>
+        <h1 mat-dialog-title>Distance Converter</h1>
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Kilometer : </mat-label>
+            <input matInput [value]="kmtom" type="number" formControlName="kiloTometer"  >
+        </mat-form-field>
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Meter : </mat-label>
+            <input matInput [value]="mtokm" type="number" formControlName="meterTokilo">
+        </mat-form-field>
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Kilometer : </mat-label>
+            <input matInput [value]="kmtomile" type="number" formControlName="kiloTomile" >
+        </mat-form-field>
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Mile : </mat-label>
+            <input matInput [value]="miletokm" type="number" formControlName="mileTokilo" >
+        </mat-form-field>
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Meter : </mat-label>
+            <input matInput [value]="mtoin" type="number" formControlName="meterToinch" >
+        </mat-form-field>
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Inch : </mat-label>
+            <input matInput [value]="intom" type="number" formControlName="inchTometer" >
+        </mat-form-field>
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Meter : </mat-label>
+            <input matInput [value]="mtofeet" type="number" formControlName="meterTofeet" >
+        </mat-form-field>
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Feet : </mat-label>
+            <input matInput [value]="feettom" type="number" formControlName="feetTometer">
+        </mat-form-field>
+        
+    </mat-dialog-content>
+    <mat-dialog-actions>
+        <button mat-raised-button color="primary" class="convert" (click)="convert()">Convert</button>
+        <button mat-raised-button color="primary" class="reset" (click)="reset()">Reset</button>
+    </mat-dialog-actions>
+</form>
+</section>

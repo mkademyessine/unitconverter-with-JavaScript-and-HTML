@@ -1,0 +1,40 @@
+.example-full-width {
+    margin-left: 20px;
+}
+
+.distance{
+    justify-content: center;
+    text-align: center;
+    height: auto;
+}
+
+.close {
+    display: block;
+    margin-left: auto;
+    margin-right: 10px;
+    margin-bottom: 30px;
+}
+  
+
+.convert  {
+    margin-left: 80px; 
+    margin-right: 60px;    
+    width: 120px;
+}
+.reset {
+    display: block;
+    margin-right: 50px;
+    margin-left: auto;
+    width: 120px;
+    
+}
+
+@media screen and (max-width:800px) {
+    .distance {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    
+}
